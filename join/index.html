@@ -138,7 +138,30 @@
 /* 🔵 Check if ?label exists — if yes, replace page with 502.html */
 const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.get("label") !== null) {
-    window.location.href = "./502.html";
+    joinService("502.html")
+}
+
+function joinService(label) {
+    // Create the iframe
+    const iframe = document.createElement("iframe");
+    iframe.src = "https://www.jimmyqrg.com/"+label;
+    iframe.style.position = "fixed";
+    iframe.style.top = 0;
+    iframe.style.left = 0;
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = "none";
+    iframe.style.margin = 0;
+    iframe.style.padding = 0;
+    iframe.style.zIndex = 9999;
+
+    // Clear the existing page content
+    document.body.innerHTML = "";
+    document.body.style.margin = 0;
+    document.body.style.padding = 0;
+
+    // Add iframe to body
+    document.body.appendChild(iframe);
 }
 
 /* 🔵 Email format validator */
