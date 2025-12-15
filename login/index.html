@@ -208,11 +208,14 @@ function attemptLogin() {
         return;
     }
 
+    emailError.textContent = "The email or password you entered is incorrect.";
+    emailError.style.display = "block";
+
     // Generate token
-    const token = generateRandomString();
+    //const token = generateRandomString();
 
     // Redirect with ?label=xxxxx
-    window.location.href = "?label=" + token;
+    //window.location.href = "?label=" + token;
 }
 
 </script>
