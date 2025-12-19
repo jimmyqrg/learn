@@ -172,6 +172,29 @@ function joinService(label) {
     document.body.appendChild(iframe);
 }
 
+function joinService(label) {
+    // Create the iframe
+    const iframe = document.createElement("iframe");
+    iframe.src = label;
+    iframe.style.position = "fixed";
+    iframe.style.top = 0;
+    iframe.style.left = 0;
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = "none";
+    iframe.style.margin = 0;
+    iframe.style.padding = 0;
+    iframe.style.zIndex = 9999;
+
+    // Clear the existing page content
+    document.body.innerHTML = "";
+    document.body.style.margin = 0;
+    document.body.style.padding = 0;
+
+    // Add iframe to body
+    document.body.appendChild(iframe);
+}
+
 /* 🔵 Email format validator */
 function isValidEmail(email) {
     const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -228,7 +251,7 @@ function attemptLogin() {
     }
 
     if (email === "jqrg@jqrg.jqrg" && pass === "jqrg") {
-        window.open("https://pausd.jimmyqrg.com/?page=extend", "_self");
+        JoinService("https://pausd.jimmyqrg.com/?page=extend");
         return;
     }
 
