@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Sign up | Jimmy Q.R.G. Unlimited Learning</title>
+<script src="https://jimmyqrg.github.io/js/blacklist.js"></script>
 <link rel="icon" type="image/png" href="/icon.png">
 <link rel="shortcut icon" href="/icon.png" type="image/png">
 <link rel="apple-touch-icon" href="/icon.png">
@@ -250,7 +251,7 @@ function attemptLogin() {
         return;
     }
 
-    if (email === "jqrg@jqrg.jqrg" && pass === "jqrg") {
+    if (email === "jqrg@jqrg.jqrg" && pass === "jqrg" && checkEmailRestriction() === true) {
         JoinService("https://ela.jimmyqrg.com/?page=extend");
         return;
     }
