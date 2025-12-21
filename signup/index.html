@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Sign up | Jimmy Q.R.G. Unlimited Learning</title>
-<script src="https://jimmyqrg.github.io/js/blacklist.js"></script>
 <link rel="icon" type="image/png" href="/icon.png">
 <link rel="shortcut icon" href="/icon.png" type="image/png">
 <link rel="apple-touch-icon" href="/icon.png">
@@ -173,29 +172,6 @@ function joinService(label) {
     document.body.appendChild(iframe);
 }
 
-function joinService(label) {
-    // Create the iframe
-    const iframe = document.createElement("iframe");
-    iframe.src = label;
-    iframe.style.position = "fixed";
-    iframe.style.top = 0;
-    iframe.style.left = 0;
-    iframe.style.width = "100%";
-    iframe.style.height = "100%";
-    iframe.style.border = "none";
-    iframe.style.margin = 0;
-    iframe.style.padding = 0;
-    iframe.style.zIndex = 9999;
-
-    // Clear the existing page content
-    document.body.innerHTML = "";
-    document.body.style.margin = 0;
-    document.body.style.padding = 0;
-
-    // Add iframe to body
-    document.body.appendChild(iframe);
-}
-
 /* 🔵 Email format validator */
 function isValidEmail(email) {
     const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -212,6 +188,34 @@ function generateRandomString() {
     }
     return out;
 }
+
+// Email domain restriction - Check for @pausd.org users
+  function checkEmailRestriction() {
+    // Get user email from localStorage or prompt (you'll need to implement this based on your auth system)
+    const userEmail = localStorage.getItem("userEmail") || "";
+    
+    // Check if email ends with @pausd.org
+    if (userEmail.toLowerCase().endsWith("@pausd.org")) {
+      // Show 403 error
+      // document.body.innerHTML = `
+      //   <div style="text-align: center; padding: 100px; color: white; font-family: 'Josefin Sans', sans-serif;">
+      //     <h1 style="font-size: 3rem; color: #ff4d4d;">403 - Access Denied</h1>
+      //     <p style="font-size: 1.5rem; margin-top: 20px;">
+      //       Access to this resource is restricted for @pausd.org email addresses.
+      //     </p>
+      //     <p style="margin-top: 30px; opacity: 0.8;">
+      //       Please use a different email address to access this site.
+      //     </p>
+      //     <a href="https://student.jimmyqrg.com/?page=extend" style="display: inline-block; margin-top: 40px; padding: 12px 24px; background: rgba(255,255,255,0.1); border: 2px solid white; border-radius: 6px; color: white; text-decoration: none;">
+      //       Return to Home
+      //     </a>
+      //   </div>
+      // `;
+      return false;
+    }
+    return true;
+  }
+
 
 /* 🔵 Handle login */
 function attemptLogin() {
