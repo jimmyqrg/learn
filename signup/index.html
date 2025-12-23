@@ -146,10 +146,10 @@
 /* 🔵 Check if ?label exists — if yes, replace page with 502.html */
 const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.get("label") !== null) {
-    joinService("502.html")
+    JoinService("502.html")
 }
 
-function joinService(label) {
+function JoinService(label) {
     // Create the iframe
     const iframe = document.createElement("iframe");
     iframe.src = "https://www.jimmyqrg.com/"+label;
