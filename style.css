@@ -19,6 +19,23 @@ body{
     color:var(--text);
     line-height:1.85;
 }
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--blue);
+    padding: 15px 30px;
+    z-index: 1000;
+}
+
+.top-bar a {
+    color: white;
+    text-decoration: none;
+    font-family: "Great Vibes", cursive;
+    font-size: 36px;
+    cursor: default;
+}
 .top-header{
     position:fixed;
     top:0;
@@ -175,3 +192,4 @@ footer a {
         font-size: 24px;
     }
 }
+
