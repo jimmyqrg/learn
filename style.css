@@ -119,3 +119,59 @@ footer a {
     text-decoration:none;
     cursor:default;
 }
+
+.error-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 20px 50px 20px; /* ensures space below top bar */
+    text-align: center;
+}
+
+.error-container h1 {
+    font-family: "Ariel", sans-serif;
+    font-size: 100px;
+    color: var(--blue);
+    margin-bottom: 20px;
+}
+
+.error-container h2 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.error-container p {
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+}
+
+.error-container a {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--blue);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.error-container a:hover {
+    background: var(--light-blue);
+}
+
+@media (max-width: 600px) {
+    .error-container h1 {
+        font-size: 60px;
+    }
+    .error-container h2 {
+        font-size: 24px;
+    }
+}
