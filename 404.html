@@ -22,12 +22,14 @@
     --muted: #666;
 }
 
-:root.dark {
-    --blue: #1746ac;
-    --light-blue: #112c67;
-    --bg:#000000;
-    --text-dark:#9cafc9;
-    --muted:#6b7280;
+@media (prefers-color-scheme: dark) {
+    :root {
+        --blue: #1746ac;
+        --light-blue: #112c67;
+        --bg:#000000;
+        --text-dark:#9cafc9;
+        --muted:#6b7280;
+    }
 }
 
 * { box-sizing: border-box; margin:0; padding:0; }

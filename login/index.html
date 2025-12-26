@@ -23,14 +23,16 @@
         --error-text: #b91c1c;
     }
 
-    :root.dark {
-        --blue: #1746ac;
-        --light-blue: #112c67;
-        --bg:#000000;
-        --text-dark:#9cafc9;
-        --muted:#6b7280;
-        --error-bg: #350000;
-        --error-text: #b91c1c;
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --blue: #1746ac;
+            --light-blue: #112c67;
+            --bg:#000000;
+            --text-dark:#9cafc9;
+            --muted:#6b7280;
+            --error-bg: #350000;
+            --error-text: #b91c1c;
+        }
     }
 
     body {
