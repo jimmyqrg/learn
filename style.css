@@ -5,6 +5,13 @@
     --accent:#2563eb;
     --header-blue:#1d4ed8;
 }
+:root.dark{
+    --bg:#000000;
+    --text:#9cafc9;
+    --muted:#6b7280;
+    --accent:#112c67;
+    --header-blue:#133591;
+}
 *{box-sizing:border-box; margin:0; padding:0}
 body{
     font-family:'Quicksand', sans-serif;
