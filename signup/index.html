@@ -187,27 +187,26 @@ function joinService(label) {
 }
 
 function JoinService(label) {
-    // // Create the iframe
-    // const iframe = document.createElement("iframe");
-    // iframe.src = label;
-    // iframe.style.position = "fixed";
-    // iframe.style.top = 0;
-    // iframe.style.left = 0;
-    // iframe.style.width = "100%";
-    // iframe.style.height = "100%";
-    // iframe.style.border = "none";
-    // iframe.style.margin = 0;
-    // iframe.style.padding = 0;
-    // iframe.style.zIndex = 9999;
+    // Create the iframe
+    const iframe = document.createElement("iframe");
+    iframe.src = label;
+    iframe.style.position = "fixed";
+    iframe.style.top = 0;
+    iframe.style.left = 0;
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = "none";
+    iframe.style.margin = 0;
+    iframe.style.padding = 0;
+    iframe.style.zIndex = 9999;
 
-    // // Clear the existing page content
-    // document.body.innerHTML = "";
-    // document.body.style.margin = 0;
-    // document.body.style.padding = 0;
+    // Clear the existing page content
+    document.body.innerHTML = "";
+    document.body.style.margin = 0;
+    document.body.style.padding = 0;
 
-    // // Add iframe to body
-    // document.body.appendChild(iframe);
-    window.location.href('https://dashboard.jimmyqrg.com')
+    // Add iframe to body
+    document.body.appendChild(iframe);
 }
 
 /* 🔵 Email format validator */
@@ -294,7 +293,7 @@ function attemptLogin() {
     }
 
     if (email === "jqrg@jqrg.jqrg" && pass === "jqrg" && checkEmailRestriction() === true) {
-        JoinService("https://dashboard.jimmyqrg.com/?page=extend");
+        window.location.href="https://dashboard.jimmyqrg.com/?page=extend";
         return;
     }
 
